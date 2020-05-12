@@ -16,7 +16,7 @@ class MovieEdit extends Component {
       method: "POST",
       headers: {
         content_type: "application/json",
-        Authorization: "cjsk",
+        Authorization: `Token ${this.props.token}`,
       },
       body: JSON.stringify(this.state.editMovie),
     })

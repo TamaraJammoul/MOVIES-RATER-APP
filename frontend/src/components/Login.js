@@ -26,6 +26,7 @@ class Login extends Component {
         .then((res) => {
           this.props.cookies.set("mr_token", res.token);
           window.location.href = "/movies";
+          console.log("ksvjkllk");
         })
         .catch((error) => console.log(error));
     } else {
@@ -39,6 +40,7 @@ class Login extends Component {
         .then((resp) => resp.json())
         .then((resp) => {
           this.setState({ isLogin: true });
+          console.log("scjkkh");
         })
         .catch((error) => console.log(error));
     }
@@ -55,7 +57,7 @@ class Login extends Component {
         <input
           type="text"
           name="username"
-          value={this.state.credentials.usarname}
+          value={this.state.credentials.username}
           onChange={this.inputChanged}
         />
         <br />
